@@ -1,0 +1,8 @@
+import {BrowserWindow} from "electron";
+
+class Mainwindow {
+    constructor(){
+	this.window = new BrowserWindow({ width:800,height:700})
+
+    }
+}
