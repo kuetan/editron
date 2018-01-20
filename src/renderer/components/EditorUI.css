@@ -1,0 +1,11 @@
+.Editor {
+    /* display: flex; */
+    /* flex-direction: row; */
+    height: 200%;
+    width: 200%;
+}
+
+.editorArea {
+    margin-right: 100px;
+}
+

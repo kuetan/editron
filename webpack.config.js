@@ -12,10 +12,20 @@ module.exports = {
 	    {
 		test: /\.jsx?$/,
 		exclude:/node_modules/,
-		loader:
-		
-}
-
-]
-}
-}
+		loader:"babel-loader"
+	    },
+	    { 
+		test:/\.css$/,
+		loader:["style-loader","css-loader?css-loader?modules"]
+	    }
+	]
+    },
+    entry:{
+	"main/index":"./src/main/index.js",
+	"render/app":"./src/renderer/app.jsx"
+    },
+    output:{
+	filename:"dist/[name].js"
+    },
+    devtool:"source-map"
+};

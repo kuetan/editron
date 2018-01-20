@@ -1,11 +1,8 @@
-import {app} "electron";
-import createMainWindow from "createMainwindow";
+import {app} from "electron";
+import createMainWindow from "./createMainWindow";
+import setAppMenu from "./setAppMenu";
 
 let mainWindow = null;
-
-app.on("ready",()=> {
-    mainWindow = createMainWindow();
-});
 
 app.on("window-all-closed",()=>{
     if(process.platform !== "darwin"){
@@ -19,6 +16,26 @@ app.on("activate",(_e,hasVisibleWindows)=>{
        }
 });
 
+function openFile(){
+    console.log("openFile");
+}
+
+function saveFile(){
+    console.log("saveFile");
+}
+
+function saveAsNewFile(){
+    console.log("saveAsNewFile");
+}
+
+function exportPDF(){
+    console.log("exportPDF");
+}
+
+app.on("ready",()=>{
+    mainWindow = createMainWindow();
+    setAppMenu({openFile,saveFile,saveAsNewFile,exportPDF});
+});
 
 
 

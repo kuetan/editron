@@ -1,6 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
+import EditorUI from "./components/EditorUI";
 
 
-render(<div>Helo,</div>,
-	document .getElementbyId("app"));
+render(<EditorUI />,document.getElementById("app"));

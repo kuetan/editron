@@ -2,9 +2,12 @@
   "name": "editron",
   "version": "1.0.0",
   "description": "simple editor",
-  "main": "index.js",
+  "main": "dist/main/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "electron ."
   },
   "author": "kue",
   "license": "ISC",
@@ -14,6 +17,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.9",
+    "devtron": "^1.4.0",
     "electron": "^1.7.10",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0"
