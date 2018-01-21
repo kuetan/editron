@@ -1,5 +1,6 @@
-.editor {
-    width: 100%;
+#editor {
+    width: 420%;
+    height: 100%;
     border: solid #ddd 1px;
     resize: none;
 }
